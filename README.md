@@ -17,6 +17,7 @@ mini web apps built with HTML, CSS and Vanilla JavaScript. Learning, practicing 
 | 02 | ... | (coming soon) |
 | 03 | ... | (coming soon) |
 
+---
 
 ### 🎯 Mission
 
