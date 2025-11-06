@@ -13,7 +13,7 @@ mini web apps built with HTML, CSS and Vanilla JavaScript. Learning, practicing 
 
 | # | Project | Demo |
 |---:|---------|------|
-| 01 | Dark Mode Toggle | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/01-dark-mode-toggle/) |
+| 01 | Dark Mode Toggle | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/1-Dark%20Mode%20Toggle/) |
 | 02 | ... | (coming soon) |
 | 03 | ... | (coming soon) |
 
