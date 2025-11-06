@@ -14,8 +14,9 @@ mini web apps built with HTML, CSS and Vanilla JavaScript. Learning, practicing 
 | # | Project | Demo |
 |---:|---------|------|
 | 01 | Dark Mode Toggle | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/01-dark-mode-toggle/) |
-| 02 | ... | (coming soon) |
+| 02 | Background Image Scroll Effect | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/02-background-image-scroll-effect/) |
 | 03 | ... | (coming soon) |
+| 04 | ... | (coming soon) |
 
 ---
 
