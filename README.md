@@ -17,8 +17,9 @@ mini web apps built with HTML, CSS and Vanilla JavaScript. Learning, practicing 
 | 02 | Background Image Scroll Effect | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/02-background-image-scroll-effect/) |
 | 03 | Dice Roll Simulator | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/03-dice-roll-simulator/) |
 | 04 | Modern Calculator | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/04-Calculator) |
-| 05 | ... | (coming soon) |
+| 05 | Age Calculator | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/05-age-calculator/) |
 | 06 | ... | (coming soon) |
+| 07 | ... | (coming soon) |
 
 ---
 
