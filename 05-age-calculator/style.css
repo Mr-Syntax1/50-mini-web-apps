@@ -1,0 +1,95 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background: #FDC830;  
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830); 
+    background: linear-gradient(to right, #F37335, #FDC830);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 70px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input{
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+button{
+    padding: 15px 25px;
+    color: #8116e6;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: #8116e6;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+#result{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+    color:#333;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        padding: 50px;
+    }
+    .container:hover{
+        transform: none;
+        box-shadow: none;
+    }
+    
+}
