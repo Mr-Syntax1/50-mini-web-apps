@@ -1,0 +1,123 @@
+/* ==== Body ==== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #89253e, #3a6186);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+/* ==== Heading with gradient animation ==== */
+.heading {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff0055, #ffbb00, #00ffaa, #6600ff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowMove 5s linear infinite;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+/* ==== Gradient animation keyframes ==== */
+@keyframes rainbowMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==== Input container ==== */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255,0.08);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+    width: 75%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ==== Labels and inputs ==== */
+label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.input {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    border: none;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ==== Output ==== */
+#output {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #ffeb3b;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ==== Error message ==== */
+#error {
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: none; 
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 480px) {
+    .heading {
+        font-size: clamp(2rem, 10vw, 4rem);
+    }
+
+    .input-container {
+        padding: 1.5rem;
+    }
+
+    .input {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    #output {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+}
