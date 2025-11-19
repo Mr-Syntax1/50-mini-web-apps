@@ -44,4 +44,4 @@ Every mini app is focused on **1 concept** → small, sharp, and practical.
 
 ## 📥 Getting Started  
 - Clone this repository:  
-git clone https://github.com/Mr-Syntax1/50-mini-web-apps.git
+- git clone https://github.com/Mr-Syntax1/50-mini-web-apps.git
