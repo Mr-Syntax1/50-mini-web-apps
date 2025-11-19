@@ -37,4 +37,11 @@ Every mini app is focused on **1 concept** → small, sharp, and practical.
 
 ---
 
-### 📂 Structure
+## 🧰 Prerequisites  
+- A modern browser (Chrome, Firefox, Edge)  
+- Basic familiarity with HTML/CSS/JavaScript  
+- No build tools or frameworks required
+
+## 📥 Getting Started  
+- Clone this repository:  
+git clone https://github.com/Mr-Syntax1/50-mini-web-apps.git
