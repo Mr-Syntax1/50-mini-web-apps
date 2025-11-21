@@ -19,7 +19,7 @@ mini web apps built with HTML, CSS and Vanilla JavaScript. Learning, practicing 
 | 04 | Modern Calculator | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/04-Calculator) |
 | 05 | Age Calculator | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/05-age-calculator/) |
 | 06 | Weight Converter | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/06-weight-converter/) |
-| 07 | Weather App | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/07-weather-app/) |
+| 07 | Weather App | 🔗 [Live Demo](https://mr-syntax1.github.io/50-mini-web-apps/07-weather-app) |
 | 08 | ... | (coming soon) |
 | 09 | ... | (coming soon) |
 
