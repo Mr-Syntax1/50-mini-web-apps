@@ -1,0 +1,134 @@
+:root{
+  --sky-1: #0f1724; /* تیره ترین */
+  --sky-2: #0b63a6; /* آبی میانی */
+  --sky-3: #6ad0ff; /* آبی روشن */
+  --accent: rgba(255,255,255,0.08);
+}
+
+/* کانتینر کلی بک‌گراند */
+.weather-bg{
+    width: 100%;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl; /* راست به چپ */
+  background: linear-gradient(180deg, var(--sky-3) 0%, var(--sky-2) 50%, var(--sky-1) 100%);
+  background-size: 200% 200%;
+  animation: skyShift 12s ease-in-out infinite;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* حرکت نرمی در گرادیانت آسمان */
+@keyframes skyShift {
+  0% { background-position: 0% 20%; }
+  50% { background-position: 100% 80%; }
+  100% { background-position: 0% 20%; }
+}
+
+/* امواج SVG */
+.waves{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28vh; /* ارتفاع امواج */
+  pointer-events: none;
+  z-index: 10;
+}
+.waves svg{
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  transform: translate3d(0,0,0);
+  opacity: .9;
+}
+.waves .wave1 path{
+  fill: rgba(255,255,255,0.06);
+}
+.waves .wave2 path{
+  fill: rgba(255,255,255,0.08);
+  transform-origin: center;
+}
+
+/* انیمیشن حرکت افقی امواج */
+@keyframes waveMove1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+@keyframes waveMove2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.waves .wave1 { animation: waveMove1 18s linear infinite; z-index:11; opacity:.7;}
+.waves .wave2 { animation: waveMove2 28s linear infinite; z-index:12; opacity:.85; }
+
+/* حباب‌ها / مه نرم */
+.bubbles{
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.bubbles span{
+  position: absolute;
+  bottom: 10%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(10px);
+  transform: translateY(0);
+  animation: floatUp linear infinite;
+}
+
+/* اندازه‌ها و مکان‌های نمونه برای ۵ حباب */
+.bubbles span:nth-child(1){
+  left: 8%;
+  width: 200px; height: 200px;
+  animation-duration: 20s; animation-delay: 0s;
+}
+.bubbles span:nth-child(2){
+  left: 30%;
+  width: 140px; height: 140px;
+  animation-duration: 28s; animation-delay: -6s;
+}
+.bubbles span:nth-child(3){
+  left: 52%;
+  width: 220px; height: 220px;
+  animation-duration: 24s; animation-delay: -3s;
+}
+.bubbles span:nth-child(4){
+  left: 72%;
+  width: 110px; height: 110px;
+  animation-duration: 30s; animation-delay: -10s;
+}
+.bubbles span:nth-child(5){
+  left: 88%;
+  width: 170px; height: 170px;
+  animation-duration: 22s; animation-delay: -4s;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(10vh) scale(.95); opacity: 0; }
+  10% { opacity: .25; }
+  50% { transform: translateY(-8vh) scale(1); opacity: .55; }
+  100% { transform: translateY(-18vh) scale(1.1); opacity: 0; }
+}
+
+/* ترجیح برای کاربران با motion کم */
+@media (prefers-reduced-motion: reduce) {
+  .weather-bg { animation: none; }
+  .waves .wave1, .waves .wave2 { animation: none; transform: none; }
+  .bubbles span { animation: none; opacity:.45; }
+}
+
+/* ریسپانسیو: کمتر کردن ارتفاع امواج در موبایل
+@media (max-width: 640px){
+  .waves{ height: 18vh; }
+  .bubbles span{ display: none; } /* غیرفعال کردن حباب‌ها برای موبایل در صورت خواستن */
+  /* .hero{ padding: 1.2rem 1.6rem; } */
+/* }  */

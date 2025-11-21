@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./weather-bg.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div class="weather-bg">
+
+  <!-- محتوای صفحه (مثال) -->
+<div class="container">
+        <h1>Weather App</h1>
+        <form>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <input type="submit" value="Get Weather">
+        </form>
+
+        <div id="weather-data">
+            <div class="icon">
+                <!-- <img src="https://openweathermap.org/img/wn/01d.png " alt="Weather Icon"> -->
+            </div>
+            <div class="temperature"></div>
+            <div class="description"></div>
+            <div class="details">
+                <!-- <div>feels like 25°C</div>
+                <div>humidity 50%</div>
+                <div>wind 5m/s</div> -->
+            </div>
+        </div>
+    </div>
+
+    
+  <!-- افکت حباب / مه -->
+  <div class="bubbles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- امواج SVG در پایین -->
+  <div class="waves" aria-hidden="true">
+    <!-- دو لایه موج برای عمق -->
+    <svg class="wave wave1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,30 C150,80 350,0 600,30 C850,60 1050,10 1200,30 L1200 120 L0 120 Z" />
+    </svg>
+    <svg class="wave wave2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C200,0 400,80 600,40 C800,0 1000,80 1200,40 L1200 120 L0 120 Z" />
+    </svg>
+  </div>
+</div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
