@@ -42,6 +42,9 @@ Every mini app is focused on **1 concept** → small, sharp, and practical.
 - Basic familiarity with HTML/CSS/JavaScript  
 - No build tools or frameworks required
 
-## 📥 Getting Started  
-- Clone this repository:  
-- git clone https://github.com/Mr-Syntax1/50-mini-web-apps.git
+## 📥 Getting Started
+
+1.  **Clone the repository:**
+```bash
+git clone https://github.com/Mr-Syntax1/simple-python-projects.git
+cd simple-python-projects
