@@ -46,5 +46,5 @@ Every mini app is focused on **1 concept** → small, sharp, and practical.
 
 1.  **Clone the repository:**
 ```bash
-git clone https://github.com/Mr-Syntax1/simple-python-projects.git
-cd simple-python-projects
+git clone https://github.com/Mr-Syntax1/50-mini-web-apps.git
+cd 50-mini-web-apps
