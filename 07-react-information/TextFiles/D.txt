@@ -1,0 +1,67 @@
+import { useForm } from 'react-hook-form'// کتابخونه‌ایه که کمک می‌کنه فرم بسازی\
+import * as yup from 'yup'// مسئول اعتبارسنجی (validation)
+
+import { yupResolver } from '@hookform/resolvers/yup'// پلی بین react-hook-form و yup تا باهم کار کنن.
+
+const SubmitForm = () => {
+    const schema = yup.object().shape({
+        name: yup.string()
+            .required("Name is required")
+            .min(3, "Name must be at least 3 characters"),
+
+        password: yup.string()
+            .min(6, "Password must be at least 6 characters")
+            .max(15, "Password must be less than 15 characters")
+            .required("Password is required")
+            .matches(/[a-z]+/).matches(/[A-Z]+/).matches(/\d+/),
+
+        confirmPassword: yup.string()
+            //  یعنی برو مقدار password رو بخون
+            .oneOf([yup.ref("password")], "passwords arent match")
+            .required("Password is required"),
+
+        email: yup.string()
+            .email("Email is not valid")
+            .required("Email is required"),
+
+        age: yup.number()
+            .transform((value, originalValue) =>
+                String(originalValue).trim() === "" ? null : value)
+            .required("Age is required")
+            .positive("Age must be a positive number")
+            .min(18, "Age must be at least 18")
+            .max(100, "Age must be less than 100")
+    })
+
+    const { register, handleSubmit, formState: { errors } } =
+        useForm({ resolver: yupResolver(schema) })
+
+    const onFormSubmit = (data) => {
+        console.log("the form is submited")
+        console.log(data);
+    }
+
+
+    return (
+        <form className="flex flex-col justify-center items-center w-full text-black" onSubmit={handleSubmit(onFormSubmit)}>
+            <input className="w-1/2 my-3 px-4 py-2" type="text" placeholder="Name..." {...register("name")} />
+            <p className='font-semibold'>{errors.name?.message}</p>
+
+            <input className="w-1/2 my-3 px-4 py-2" type="password" placeholder="Password..." {...register("password")} />
+            <p className='font-semibold'>{errors.password?.message}</p>
+
+            <input className="w-1/2 my-3 px-4 py-2" type="password" placeholder="Confirm Password..." {...register("confirmPassword")} />
+            <p className='font-semibold'>{errors.confirmPassword?.message}</p>
+
+            <input className="w-1/2 my-3 px-4 py-2" type="email" placeholder="Email..." {...register("email")} />
+            <p className='font-semibold'>{errors.email?.message}</p>
+
+            <input className="w-1/2 my-3 px-4 py-2" type="number" placeholder="Age..." {...register("age")} />
+            <p className='font-semibold'>{errors.age?.message}</p>
+
+            <input className="btn cursor-pointer my-5" type="submit" />
+        </form>
+    )
+}
+
+export default SubmitForm;

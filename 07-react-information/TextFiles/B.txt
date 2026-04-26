@@ -1,0 +1,53 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from "./Pages/Home"
+import About from "./Pages/About"
+import Contact from "./Pages/Contact"
+import Error from "./Pages/Error"
+import Nav from "./Pages/Nav"
+import Profile from "./Pages/Profile"
+
+
+
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+        <div className="text-center text-3xl h-96 flex justify-center items-end">this is footer</div>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+                                     and for another file
+
+
+
+
+
+import { Link } from 'react-router-dom'
+
+
+const Nav = () => {
+    return (
+        <nav className='text-center mt-10 text-2xl font-semibold flex justify-around'>
+            <Link className='btn' d to='/'>Home</Link>
+            <Link className='btn' to='/about'>About</Link>
+            <Link className='btn' to='/contact'>Contact</Link>
+            <Link className='btn' to='/profile'>Profile</Link>
+        </nav>
+    )
+}
+
+export default Nav;

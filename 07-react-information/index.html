@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+         <div class="header-content">
+        <nav>
+            <select id="react-section-selector" onchange="scrollToSection(this.value)">
+                <option value=""sele>install React sections</option>
+                <option value="react-vite">Downloading React Vite</option>
+                <option value="install-npm">install npm</option>
+                <option value="install-tailwind">install Tailwind CSS</option>
+                <option value="react-router">React Router libraries</option>
+                <option value="axios-fetch">Axios libraries</option>
+                <option value="react-query">React Query libraries</option>
+                <option value="react-hook-form">React Hook Form libraries</option>
+            </select>
+
+            <select id="library-section-selector" onchange="scrollToSection(this.value)">
+                <option value="">libraries</option>
+                <option value="react-router">React Router DOM</option>
+                <option value="axios-fetch">Axios</option>
+                <option value="react-query">React Query (@tanstack/react-query)</option>
+                <option value="react-hook-form">React Hook Form (react-hook-form, yup, @hookform/resolvers)</option>
+            </select>
+        </nav>
+    </div>
+    </header>
+    
+
+    <main>
+
+        <h2 class="title">hi this page will explaine what i learned from react</h2>
+
+        <div id="react-vite" class="container">
+        <p class="explain">1- first download react vite:</p>
+        <p class="center">npm create vite@latest my-project -- --template react</p>
+        </div>
+        
+        <div id="install-npm" class="container">
+        <p class="explain">2- install npm :</p>
+        <p class="center">npm install</p>
+        </div>
+
+        <div id="install-tailwind" class="container">
+        <p class="explain">3- install tailwind :</p>
+        <p class="center">npm install -D tailwindcss@3 postcss autoprefixer</p>
+        <p class="center">npx tailwindcss init -p</p>
+        </div>
+
+        <div class="container">
+        <p class="explain">4-put this code in css</p>
+        <div class="center">
+        <p>@tailwind base;</p>
+        <p>@tailwind components;</p>
+        <p>@tailwind utilities;</p>
+        </div>
+
+        </div>
+
+        <div class="container">
+        <p class="explain">5- and put this in tailwind setting</p>
+        <div class="center">
+            
+    <p>/** @type {import('tailwindcss').Config} */</p>
+    <p>export default {</p>
+    <p>content: [</p>
+        <p>"./index.html",</p>
+        <p>"./src/**/*.{js,ts,jsx,tsx}",</p>
+    <p>],</p>
+    <p>theme: {</p>
+        <p>extend: {},</p>
+    <p>},</p>
+    <p>plugins: [],</p>
+    <p>}
+        </div>
+        </div>
+
+    <p class="center" style="font-size: 1.3rem; max-width: 600px; margin:auto;">  DONE!  </p>
+
+        <h2 id="react-router" class="title">for downloading some libraries we have to download these:</h2>
+
+        <div class="container">
+        <p class="explain">1-for using links and routers like:</p>
+        <p class="center">import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'</p>
+        <br><br>
+        <p class="explain">we have to download this library : </p>
+        <p class="center">npm install react-router-dom</p>
+
+    <a class="links" href="./TextFiles/B.txt" target="_blank">
+        Example Text File
+    </a>
+
+        </div>
+        
+        <div id="axios-fetch" class="container">
+        <p class="explain">2-for write api fetching better and esealy we can use axios and for install this library we must write :</p>
+        <p class="center">npm install axios</p>
+
+        <a class="links" href="./TextFiles/C.txt" target="_blank">
+        Example Text File
+    </a>
+        </div>
+
+        <div id="react-query" class="container">
+        <p class="explain">3-for better management api like make : { data, isError, error, refetch, isFetching }
+        we use queries for install them we must write :</p>
+        <p class="center">npm install @tanstack/react-query</p>
+        <br><br>
+        <p class="explain">and we write that like this:</p>
+
+        <a class="links" href="./TextFiles/A.txt" target="_blank">
+        Example Text File
+    </a>
+        
+        </div>
+
+        <div id="react-hook-form" class="container">
+        <p class="explain">4-for forms</p>
+        <p class="center">npm install react-hook-form yup  @hookform/resolvers</p>
+    <a class="links" href="./TextFiles/D.txt" target="_blank">
+        Example Text File
+    </a>
+        </div>
+
+    </main>
+    <div class="aleart"></div>
+
+    <footer>
+        <p class="title">this page will update soon...</p>
+    </footer>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

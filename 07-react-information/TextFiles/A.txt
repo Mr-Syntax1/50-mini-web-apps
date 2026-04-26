@@ -1,0 +1,57 @@
+import { useContext } from "react";
+import { ProfileContext } from "../App";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+
+const Home = () => {
+    const { username } = useContext(ProfileContext);
+
+    const { data: catData, isError, error, refetch, isFetching } = useQuery({
+        queryKey: ["cat key"],
+        enabled: false,
+        queryFn: async () => {
+            return axios.get("https://catfact.ninja/fact").then(res => res.data);
+        }
+    });
+
+    if (isFetching) {
+        return <div className="flex items-center flex-col justify-center h-96 gap-2 App text-2xl text-center">
+            <p className="bg-[#ffffff46] p-5 rounded-xl">Loading...</p>
+        </div>;
+    }
+
+
+    if (isError) {
+        return <div className="flex items-center flex-col justify-center h-96 gap-2 App text-2xl" style={{ color: 'blue' }}>
+            Error fetching cat fact! {error.message}
+            <button className="btn mt-4" onClick={refetch}>Try Again</button>
+        </div>;
+    }
+
+
+    // --- رندر نهایی ---
+    return (
+        <div className="flex items-center flex-col justify-center gap-3 App text-2xl text-center">
+            <p className="pb-5 my-14">Home page - Username is: {username}</p>
+
+            {/* اگر داده‌ای نداریم (حالت اولیه) */}
+            {!catData ? (
+                <button className="btn" onClick={refetch}>
+                    Get Cat Fact Now!
+                </button>
+            )
+                : (
+                    // اگر داده داریم (حالت موفقیت)
+                    <>
+                        <h1 className="bg-slate-700 p-3 rounded-md" >Cat Fact :</h1>
+                        <h2 className="bg-slate-700 p-3 m-3 rounded-md font-semibold">{catData?.fact}</h2>
+                        <button className="btn" onClick={refetch}>
+                            Update Fact
+                        </button>
+                    </>
+                )}
+        </div>
+    );
+}
+
+export default Home;

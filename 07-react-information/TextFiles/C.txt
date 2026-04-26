@@ -1,0 +1,38 @@
+import './app.css'
+import { useState } from 'react'
+import axios from 'axios';
+
+function App() {
+
+    const [PredictedResult, setPredictedResult] = useState("")
+
+    const fetchParty = (excuce) => {
+        axios.get(`https://excuser-three.vercel.app/v1/excuse/${excuce}/`).then((res) => {
+            setPredictedResult(res.data[0].excuse)
+        })
+    }
+
+    return (
+        <div className="flex items-center flex-col justify-center h-96 gap-2 App">
+            <h1 className='text-3xl font-bold mb-5 '>Age event with our api</h1>
+            <button
+                className="bg-blue-500 text-white transition-all duration-300 hover:bg-white hover:text-blue-500 font-bold py-2 px-4 rounded-md"
+                onClick={() => fetchParty("party")}
+            >Party</button>
+            <button
+                className="bg-blue-500 text-white transition-all duration-300 hover:bg-white hover:text-blue-500 font-bold py-2 px-4 rounded-md"
+                onClick={() => fetchParty("family")}
+            >Family</button>
+            <button
+                className="bg-blue-500 text-white transition-all duration-300 hover:bg-white hover:text-blue-500 font-bold py-2 px-4 rounded-md"
+                onClick={() => fetchParty("office")}
+            >Office</button>
+
+            <p className='text-white bg-black font-semibold w-3/4 rounded-md p-3 flex justify-around'>
+                <span>{PredictedResult}</span>
+            </p>
+        </div>
+    );
+}
+
+export default App;
