@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(88, 35, 158);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;
+    padding: 50px 0;
+    background: linear-gradient(#4d12d6, #9209ec);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 20px 0 35px 0;
+    color: #3a0ca3;
+}
+
+
+input {
+    width: 400px;
+    margin: 10px auto 25px auto;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 10px rgb(212, 209, 209);
+    transition: all .3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0px 0px 18px rgb(255, 255, 255);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+
+button {
+    padding: 10px 15px;
+    width: 200px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #6630e6;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.add {
+    margin: 30px auto;
+}
+
+button:hover {
+    background-color: #4c00ff;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Libutton {
+    margin-left: 30px;
+    width: 120px;
+}
+
+li {
+    font-size: 1.4rem;
+    background-color: #4d12d6;
+    margin-bottom: 10px;
+    padding: 12px;
+    width: 450px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.4s ease;
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+.checkbox {
+    width: fit-content;
+    margin-left: 10px;
+    /* padding: 19px; */
+}
+
+li.completed {
+    text-decoration: line-through;
+    background: #d3e3fc;
+    color: #6c757d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width : 500px) {
+    li {
+        width: 85%;
+    }
+
+    .Libutton {
+        width: 90px;
+    }
+
+    input {
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+}
